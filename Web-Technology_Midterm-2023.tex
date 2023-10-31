@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\author{Mukaumba Comfort} 
+\title{Web Technolgy And Development}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Section 1}
+\subsection{Cross-Site scripting Q1}What is cross-site scripting(xss) and how can it be prevented in web applications? \par
+Cross-Site scripting is a web security vulnerability that allows an attacker to compromise the interactions that users have with a nulnerable application.It can lead to data theft session hijacking and other malicious actions.\par
+\textbf {To prevent XSS  the developer should:}
+\begin{itemize}
+    \item \underline{Input Validation:}Filter and sanitize user  inputs to remove or neutralize malicious code.
+    \item \underline{output Encoding:}Encode user-generated context when rendering it on a web page.
+    \item \underline{Context Security Policy:}Implement CSP headers to restrict which scripts can be executed on a page.
+    \item \underline{Use Security Libraries:}Leverage security libraries and frameworks that offer built-in protection on a page.
+    \item \underline{Keep Software Updated:}Regularly update software componenets,libraries and frameworks to patch known vulnerabilities. 
+\end{itemize}
+\subsection{Cross-site Request Forgery Q2}Explain the concept of CSRF and provide an example of a mitigation technuque?
+Cross-Site Request Forgery is an attack where an attacker tricks a user into making unintended requests to a different website while the user is authenticated on a target site.
+To mitigate CSRF developers can use anti-CSRF tokens, which are unique tokens included in each form or request.These tokens must be verified on the server before processing the request ensuring that the request comes from the expected source.
+
+\subsection{SQL Q3}What is SQL injection and how can developers protect their web applications from it?\par
+SQL injection is a vulnerability that occurs when attackers insert malicious SQL quiries into input fields, enabling them to manipulate or exctract data from a database.\par
+\textbf{To protect against SQL injection, developers can:}
+\begin{itemize}
+    \item Use prepared statements and parameterized quiries to seperate SQL code from user input.
+    \item Implement input validation and sanitization to remove or neutralize malicious SQL code.
+    \item Follow the least privilege principle and ensure that database accounts have manual privileges. 
+\end{itemize}
+
+\subsection{ Authentication and Authorization Q4}Define authentication and authorization.How are they different?
+Authentication is the process of verifying the identity of a user, typically using a username and password.It answers the question,"Who are you?".\par
+Authorization on the other hand, is the process of detemining what actions or resources a user is allowed to access after they've been authenticated.It answers the question,"What are you allowed to do?".Authentication establishes indentity,while authorization determines  access right.
+
+\subsection{Security Practices For  Web Developers Q5}List three security best practices that  developers should follow when building web applications?
+\begin{itemize}
+    \item \underline{Input Validations:}Filter and sanitize user inputs to prevent injection attacks like SQL injection and XSS.
+    \item \underline{Regular Software Updates:}Keep all software components,libraries and frameworks up to date, to patch known vulnerabilities.
+    \item \underline{Strong Authentication and Authorization:}Implement robust authentication mechanisms and fine-grained authorization controls to secure data and system security.  
+\end{itemize}
+
+\section{section 2:Development and Hosting}
+\subsection{Hosting and Cloud Servives Q6}Compare shared hosting and cloud services as web hosting options.What are the advantages and disadvantages of each?
+\begin{itemize}
+    \item Shared Hosting:
+    \item \underline{Advantage:}Cost-effective, easy setup managed by the hosting provider.
+    \item \underline{Disadvantage:}Limited resources,performance variability,less control,potential security concerns.
+    \item Cloud Services:
+    \item \underline{Advantage:}Scalability,better performance,flexibility,control,security features,pay-as-you-go pricing.
+    \item \underline{Disadvantage:}Pontentially higher cost learning curve,increased management responsibilities.
+\end{itemize}
+
+\subsection{Q7}Describe the steps involved in deploying a web application to a server?\par Inlcude any necessary tools or technologies?\par
+\textbf{Steps in deploying a web application to a server:}
+\begin{itemize}
+    \item Choose a hosting provider or server infrastracture.
+    \item Prepare the server by installing necessary software(e.g Web Server Database).
+    \item Upload application files to the server using protocals like FTP or SCP.
+    \item Configure the server to run the application, including setting up environment variables and server settings.
+    \item Test the application to ensure it's working correctly.
+    \item Moniter and maintain the server to address issues and apply updates as needed.
+    \item Tools and technologies may include FTP clients,SSH for server access,Configuration management tools like Ansible or Docker for containerazation.
+\end{itemize}
+
+\subsection{Q8}What is the continous intergration and continous Development?\par How does it benefit the development and deployment of a web applications?
+continous intergration(CI)is a practice where developers frequently integrate their code changes into a shared repository,which is automatically built and tested.Continous deployment(CD) extends CI by automatically deploying successful builds to production.\par
+    \textbf{Benefits of CI/CD for web applications:}
+\begin{itemize}
+    \item \underline{Improved Code Quality:}Frequent intergration and automated testing catch bugs early.
+    \item \underline{Faster Release Cycles:} Automated deploment reduces manual intervention and accelerates releases.
+    \item \underline{Enhanced Collaboration:} CI/CD encourages Collaboration among development,testing and operations teams.
+    \item \underline{Rapid Issue Resolution:} It enables faster responses to issues and features requests.
+    \item \underline{increased Reliabilty:} The automation process ensures consistent and reliable deployment. 
+\end{itemize}
+\end{document}
